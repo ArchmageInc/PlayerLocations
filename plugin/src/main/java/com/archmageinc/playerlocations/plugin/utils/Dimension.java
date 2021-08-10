@@ -1,4 +1,4 @@
-package com.archmageinc.playerlocations.utils;
+package com.archmageinc.playerlocations.plugin.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

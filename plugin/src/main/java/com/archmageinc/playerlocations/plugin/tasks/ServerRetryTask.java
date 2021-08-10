@@ -1,6 +1,6 @@
-package com.archmageinc.playerlocations.tasks;
+package com.archmageinc.playerlocations.plugin.tasks;
 
-import com.archmageinc.playerlocations.SocketServer;
+import com.archmageinc.playerlocations.plugin.SocketServer;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class ServerRetryTask extends BukkitRunnable {

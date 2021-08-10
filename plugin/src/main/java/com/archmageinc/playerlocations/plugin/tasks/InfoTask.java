@@ -1,8 +1,8 @@
-package com.archmageinc.playerlocations.tasks;
+package com.archmageinc.playerlocations.plugin.tasks;
 
-import com.archmageinc.playerlocations.PlayerLocations;
-import com.archmageinc.playerlocations.SocketServer;
-import com.archmageinc.playerlocations.info.Info;
+import com.archmageinc.playerlocations.plugin.PlayerLocations;
+import com.archmageinc.playerlocations.plugin.SocketServer;
+import com.archmageinc.playerlocations.plugin.info.Info;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.logging.Level;
@@ -24,8 +24,8 @@ public class InfoTask extends BukkitRunnable {
         }
         Info info = new Info();
         
-        plugin.getDataHandlers().forEach(dataHandler -> {
-            info.putAll(dataHandler.getData());
+        plugin.getInfoHandlers().forEach(dataHandler -> {
+            info.putAll(dataHandler.getInfo());
         });
         
         sendToSocket(info);

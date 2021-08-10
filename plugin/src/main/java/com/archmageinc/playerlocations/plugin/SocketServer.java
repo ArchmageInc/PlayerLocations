@@ -1,6 +1,6 @@
-package com.archmageinc.playerlocations;
+package com.archmageinc.playerlocations.plugin;
 
-import com.archmageinc.playerlocations.tasks.ServerRetryTask;
+import com.archmageinc.playerlocations.plugin.tasks.ServerRetryTask;
 import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.InetSocketAddress;

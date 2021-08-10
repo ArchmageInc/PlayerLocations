@@ -1,4 +1,4 @@
-package com.archmageinc.playerlocations.info;
+package com.archmageinc.playerlocations.plugin.info;
 
 public class PlayerInfo {
     String name;

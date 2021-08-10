@@ -1,25 +1,25 @@
-package com.archmageinc.playerlocations.datahandlers;
+package com.archmageinc.playerlocations.plugin.infohandlers;
 
-import com.archmageinc.playerlocations.DataHandler;
-import com.archmageinc.playerlocations.PlayerLocations;
-import com.archmageinc.playerlocations.info.PlayerInfo;
-import com.archmageinc.playerlocations.info.PositionInfo;
-import com.archmageinc.playerlocations.utils.Dimension;
+import com.archmageinc.playerlocations.plugin.PlayerLocations;
+import com.archmageinc.playerlocations.plugin.info.PlayerInfo;
+import com.archmageinc.playerlocations.plugin.info.PositionInfo;
+import com.archmageinc.playerlocations.plugin.utils.Dimension;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.archmageinc.playerlocations.api.InfoHandler;
 
-public class PlayerDataHandler implements DataHandler {
+public class PlayerInfoHandler implements InfoHandler {
     PlayerLocations plugin;
     
-    public PlayerDataHandler(PlayerLocations plugin) {
+    public PlayerInfoHandler(PlayerLocations plugin) {
         this.plugin = plugin;
     }
     
     
     @Override
-    public Map<String, Object> getData() {
+    public Map<String, Object> getInfo() {
         Map<String, Object> map = new HashMap();
         List<PlayerInfo> players = new ArrayList();
         
