@@ -1,0 +1,4 @@
+socket_server:
+    port: 8888
+    host: localhost
+    tick_interval: 100
