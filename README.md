@@ -65,14 +65,46 @@ If you would like to add additional information to the socket using a custom plu
 
 ```YAML
 name: YourPluginName
-main: com.your.plugin.Plugin
+main: com.your.plugin.YourPlugin
 version: 0.17
 api-version: 1.17
 depend: [PlayerLocations]
 ```
 
+or
+
 ```YAML
 softdepend: [PlayerLocations]
 ```
 
+In your plugin project, add PlayerLocationsAPI as a dependency. The JAR is available as an artifact in each [release](https://github.com/ArchmageInc/PlayerLocations/releases).
 
+In your plugin, use the following example to add an element with a key of `"newInformation"` and a value of `"I've extended the PlayerLocations Plugin!"`.
+
+```Java
+package com.your.plugin;
+
+import com.archmageinc.playerlocations.api.InfoRegistrar;
+import com.archmageinc.playerlocations.api.InfoHandler;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class YourPlugin extends JavaPlugin implements InfoHandler {
+    
+    @Override
+    public void onEnable() {
+        InfoRegistrar playerLocationsPlugin = (InfoRegistrar) getServer().getPluginManager().getPlugin("PlayerLocations");
+
+        playerLocationsPlugin.registerInfoHandler(this);
+    }
+    
+    @Override
+    public Map<String, Object> getInfo() {
+        Map<String, Object> info = new HashMap();
+        info.put("newInformation" , "I've extended the PlayerLocations Plugin!");
+        return info;
+    }
+    
+}
+```
+
+Since this uses [ObjectMapper](https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/ObjectMapper.html) to convert the objects, there is a lot of flexibility on what can be sent. 
