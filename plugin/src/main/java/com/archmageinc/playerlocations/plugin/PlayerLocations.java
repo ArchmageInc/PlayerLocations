@@ -16,7 +16,7 @@ public class PlayerLocations extends JavaPlugin implements InfoRegistrar{
     SocketServer socketServer;
     Set<InfoHandler> dataHandlers = new HashSet();
     InfoTask infoTask;
-
+    
     @Override
     public void onEnable() {
         saveDefaultConfig();
@@ -39,11 +39,13 @@ public class PlayerLocations extends JavaPlugin implements InfoRegistrar{
         }
     }
     
+    @Override
     public void registerInfoHandler(InfoHandler handler) {
         dataHandlers.add(handler);
     }
     
     @NotNull
+    @Override
     public Set<InfoHandler> getInfoHandlers() {
         return dataHandlers;
     }
