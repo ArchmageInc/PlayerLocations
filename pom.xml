@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.archmageinc.playerlocations</groupId>
     <artifactId>PlayerLocations</artifactId>
-    <version>0.17</version>
+    <version>0.18</version>
     <packaging>pom</packaging>
     <modules>
         <module>plugin</module>
@@ -11,7 +11,7 @@
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 </project>

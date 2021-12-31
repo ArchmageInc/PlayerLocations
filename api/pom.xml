@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.archmageinc.playerlocations</groupId>
     <artifactId>PlayerLocationsAPI</artifactId>
-    <version>0.17</version>
+    <version>0.18</version>
     <packaging>jar</packaging>
     <parent>
         <groupId>com.archmageinc.playerlocations</groupId>

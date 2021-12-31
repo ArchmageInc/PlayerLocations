@@ -8,7 +8,7 @@
     <parent>
         <groupId>com.archmageinc.playerlocations</groupId>
         <artifactId>PlayerLocations</artifactId>
-        <version>0.17</version>
+        <version>0.18</version>
     </parent>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,7 +35,7 @@
         <dependency>
            <groupId>org.spigotmc</groupId>
            <artifactId>spigot-api</artifactId>
-           <version>1.17.1-R0.1-SNAPSHOT</version>
+           <version>1.18.1-R0.1-SNAPSHOT</version>
            <scope>provided</scope>
         </dependency>
         <dependency>
